@@ -759,6 +759,22 @@ def unknown(message):
 # ============================================
 #  ЗАПУСК
 # ============================================
-
+# ... весь остальной код ...
 print("🌟 Nairy Stars — бот запущен!")
+
+# Анти-сон
+import threading
+import time
+import requests
+
+def keep_alive():
+    while True:
+        time.sleep(600)
+        try:
+            requests.get("https://nairy-stars.onrender.com", timeout=5)
+        except:
+            pass
+
+threading.Thread(target=keep_alive, daemon=True).start()
+
 bot.infinity_polling()
