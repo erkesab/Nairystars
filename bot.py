@@ -208,7 +208,7 @@ def start(message):
         show_admin_panel(message.chat.id)
         return
 
-    bot.send_photo(
+    bot.send_message(
         message.chat.id,
         photo="https://i.ibb.co/q3V6PQx0/1782466395871.png",
         caption=(
